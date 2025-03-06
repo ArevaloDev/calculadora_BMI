@@ -25,8 +25,8 @@
         <div class="fondoItem">
           <div class="contenedor">
             <p>Altura</p>
-            <div class="estiloNumero">170<span class="cm">cm</span></div>
-            <input type="range" class="form-range" >
+            <div class="estiloNumero">{{altura}}<span class="cm">cm</span></div>
+            <input   [(ngModel)]="altura" min="120" max="220" type="range" class="form-range" >
 
           </div>
         </div>
@@ -36,12 +36,30 @@
     <div class="row">
       <div class="col-lg-6">
         <div class="fondoItem">
-
+          <div class="contenedor">
+            <p>Peso</p>
+            <div class="estiloNumero">
+              {{peso}}
+            </div>
+            <div>
+              <i class="fa-solid fa-minus sumaResta" (click)="actualizarPeso('minus')"></i>
+              <i class="fa-solid fa-plus sumaResta" (click)="actualizarPeso('plus')"></i>
+            </div>
+          </div>
         </div>
       </div>
       <div class="col-lg-6">
         <div class="fondoItem">
-
+          <div class="contenedor">
+            <p>Edad</p>
+            <div class="estiloNumero">
+              {{edad}}
+            </div>
+            <div>
+              <i class="fa-solid fa-minus sumaResta" (click)="actualizarEdad('minus')"></i>
+              <i class="fa-solid fa-plus sumaResta" (click)="actualizarEdad('plus')"></i>
+            </div>
+          </div>
         </div>
       </div>
     </div>
