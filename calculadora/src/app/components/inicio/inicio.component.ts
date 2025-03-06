@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { GeneroService } from '../../services/genero.service';
 
 @Component({
   selector: 'app-inicio',
@@ -8,27 +9,24 @@ import { Component } from '@angular/core';
 export class InicioComponent {
 
   public edad:number = 18;
-  public peso:number = 130;
+  public peso:number = 10;
   public altura:number = 140;
+  public genero:string = 'Masculino';
+
+  constructor(private generoService:GeneroService){}
 
 
-
-  actualizarEdad = (option:string):void => {
-    if((option === 'plus' && this.edad < 100) || (option === 'minus' && this.edad > 0 ) ){
-      this.edad = option == 'plus' ? this.edad + 1 : this.edad - 1;
-
-    }
+  actualizarEdad = (option:string,):void => {
+    this.edad = this.generoService.actualizarEdad(option, this.edad);
   }
 
   actualizarPeso = (option:string):void => {
-    if(option === 'minus' && this.peso <= 0) return;
-      this.peso = option == 'plus' ? this.peso + 1 : this.peso - 1;
-
+    this.peso = this.generoService.actualizarPeso(option, this.peso);
   }
 
-  actualizarAltura = (event:number):void => {
-    console.log(event);
 
+  actualizarGenero = (genero:string):void => {
+    this.genero = this.generoService.actualizarGenero(genero);
   }
 
 }

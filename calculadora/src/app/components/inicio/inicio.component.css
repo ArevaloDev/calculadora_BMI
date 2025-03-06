@@ -18,9 +18,16 @@
   border-color: #ff3366;
 }
 
-
+.genero-contenedor{
+  cursor: pointer;
+}
 .genero{
   font-size: 40px;
+  cursor: pointer;
+}
+
+.generoDesactivo{
+  background-color: #7D2F2F33;
 }
 
 .contenedor{
