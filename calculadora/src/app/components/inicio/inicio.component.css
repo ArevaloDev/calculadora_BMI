@@ -1,0 +1,52 @@
+.fondoItem{
+  background-color: #ff111328;
+  height: 130px;
+  border-radius: 20px;
+  color: #fff;
+}
+
+
+.btn{
+  background-color: #ff3366;
+  border-color: #ff3366;
+  border-radius: 25px;
+  width: 100%;
+}
+
+.btn:hover{
+  background-color: #ff3366;
+  border-color: #ff3366;
+}
+
+
+.genero{
+  font-size: 40px;
+}
+
+.contenedor{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+}
+
+.estiloNumero{
+  font-size: 32px;
+  font-weight: 800;
+  margin-top: -30px;
+}
+
+.cm{
+  font-size: 16px;
+  font-weight: 400;
+  margin-right: -10px;
+}
+
+.form-range{
+  padding: 0px 20px;
+}
+
+input[type=range]::-webkit-slider-thumb{
+  background-color: #ff3366;
+}
