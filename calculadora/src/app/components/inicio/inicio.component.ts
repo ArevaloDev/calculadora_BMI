@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { GeneroService } from '../../services/genero.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-inicio',
@@ -13,7 +14,11 @@ export class InicioComponent {
   public altura:number = 140;
   public genero:string = 'Masculino';
 
-  constructor(private generoService:GeneroService){}
+  constructor(
+    private generoService:GeneroService,
+    private router:Router
+
+  ){}
 
 
   actualizarEdad = (option:string,):void => {
@@ -27,6 +32,10 @@ export class InicioComponent {
 
   actualizarGenero = (genero:string):void => {
     this.genero = this.generoService.actualizarGenero(genero);
+  }
+
+  calcularBMI = ():void => {
+    this.router.navigate(['/resultado'])
   }
 
 }

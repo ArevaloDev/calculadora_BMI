@@ -6,17 +6,7 @@
 }
 
 
-.btn{
-  background-color: #ff3366;
-  border-color: #ff3366;
-  border-radius: 25px;
-  width: 100%;
-}
 
-.btn:hover{
-  background-color: #ff3366;
-  border-color: #ff3366;
-}
 
 .genero-contenedor{
   cursor: pointer;
@@ -26,7 +16,7 @@
   cursor: pointer;
 }
 
-.generoDesactivo{
+.generoInactivo{
   background-color: #7D2F2F33;
 }
 
